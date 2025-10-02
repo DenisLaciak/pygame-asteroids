@@ -1,5 +1,8 @@
 import pygame
 from constants import *
+from player import Player
+
+player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 def main():
   pygame.init()
@@ -10,6 +13,7 @@ def main():
 
   while True:
     screen.fill("black")
+    player.draw(screen)
     pygame.display.flip()
 
     for event in pygame.event.get():
